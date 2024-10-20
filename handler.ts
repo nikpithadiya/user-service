@@ -20,7 +20,10 @@ export const createUser = async (event: APIGatewayProxyEvent): Promise<APIGatewa
         }),
       };
     }
-    const userId = randomUUID(); // Generate unique userId
+
+    // No need for userId from requestbody just added for running tests
+    const userId = requestBody?.userId ?? randomUUID(); // Generate unique userId
+    
     const newUser = {
       userId,
       name,
