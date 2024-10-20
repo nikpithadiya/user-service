@@ -1,4 +1,4 @@
-import { createUser, getUser, updateUser, deleteUser } from '../handler';
+import { createUser, getUser, updateUser, deleteUser } from '../services/userHandler';
 import { DynamoDB } from 'aws-sdk';
 import { APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda';
 jest.mock('aws-sdk');

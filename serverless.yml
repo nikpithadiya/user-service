@@ -22,7 +22,7 @@ provider:
 
 functions:
   getAllUsers:
-    handler: handler.getAllUsers
+    handler: ./service/userHandlergetAllUsers
     events:
       - http:
           path: users
@@ -30,7 +30,7 @@ functions:
           cors: true
 
   createUser:
-    handler: handler.createUser
+    handler: ./service/userHandlercreateUser
     events:
       - http:
           path: users
@@ -38,7 +38,7 @@ functions:
           cors: true
           
   getUser:
-    handler: handler.getUser
+    handler: ./service/userHandlergetUser
     events:
       - http:
           path: users/{userId}
@@ -46,7 +46,7 @@ functions:
           cors: true
 
   updateUser:
-    handler: handler.updateUser
+    handler: ./service/userHandlerupdateUser
     events:
       - http:
           path: users/{userId}
@@ -54,7 +54,7 @@ functions:
           cors: true
 
   deleteUser:
-    handler: handler.deleteUser
+    handler: ./service/userHandlerdeleteUser
     events:
       - http:
           path: users/{userId}
